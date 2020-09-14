@@ -1,0 +1,25 @@
+body {
+    color: black;
+}
+.Bucket-list {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 100px;
+}
+
+button {
+    padding: 8px;
+    border-radius: 5px;
+    border: none
+}
+
+label {
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    #countries {
+        width: 100% !important;
+    }
+}

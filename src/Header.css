@@ -1,0 +1,36 @@
+
+.subtitle {
+    width: 60%;
+    padding-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FEFFFF;
+    opacity: 0.8;
+    border-radius: 5px;
+    padding: 25px
+}
+
+span {
+    font-weight: bolder;
+}
+
+h1 {
+    color: rebeccapurple;
+}
+
+.App-header {
+    background-image: url("./images/earthbody.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+}
+
+@media (max-width: 696px) {
+    .App-header {
+        padding: 85px;
+    }
+    .subtitle {
+        width: 100%
+    }
+}

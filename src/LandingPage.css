@@ -1,0 +1,81 @@
+body {
+    background-color: #63BDB3;
+}
+.box-controller {
+    display: flex;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    align-items: center;
+    transition: visibility 0.5s ease-out;
+}
+
+.controller {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 2;
+    cursor: pointer;
+}
+
+/* //Currently Selected Controller */
+.selected-controller {
+    transition: border 0.5s ease-out;
+    border-bottom: 2px solid rebeccapurple;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 7px;
+}
+
+.box-container {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px
+}
+
+.inner-container {
+    padding-bottom: 40px;
+}
+
+.main-box {
+    font-size: 1.5rem;
+}
+
+button, input {
+    font-size: 1rem;
+}
+
+@media (min-width: 696px) {
+    .box-container {
+        width: 30%;
+    }
+    .box-controller {
+        width: 30%;
+        margin-top: 0px 
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+}
+
+

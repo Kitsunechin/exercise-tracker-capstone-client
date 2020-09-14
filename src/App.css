@@ -1,0 +1,38 @@
+body {
+  background-color: #cccccc;
+  color: rebeccapurple;
+}
+.Main-view {
+  display: flex;
+}
+
+
+.App-header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+
+button, #delete-note{
+  display: block;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  margin-top: 1em;
+}
+
+form {
+  text-align: left;
+  padding-top: 2em;
+}
+
+input, textarea{
+ display: block;
+ margin-top: 0.5em;
+ margin-bottom: 0.5em;
+}

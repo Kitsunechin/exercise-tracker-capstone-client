@@ -9,8 +9,11 @@ import TokenService from './services/token-service.js';
 import NotFoundPage from './NotFoundPage';
 import LandingPage from './LandingPage';
 import Navigation from './Navigation';
-import BucketListPage from './BucketListPage';
-import VisitedPage from './VisitedPage';
+// import BucketListPage from './___BucketListPage';
+// import VisitedPage from './__VisitedPage';
+import Dashboard from './Dashboard'
+import ExerciseListPage from './ExerciseListPage'
+import AddExercisePage from './AddExercisePage'
 import SideDrawer from './SideDrawer';
 import Backdrop from './Backdrop';
 
@@ -53,18 +56,23 @@ render() {
       {backdrop}
       <main className='Main-view'>
         <Switch>
-          <Route exact path='/' render={() => {
+        <Route exact path='/' render={() => {
             return <LandingPage />
           }}/>
-          <Route path='/visited' render={() => {
-            return (TokenService.hasAuthToken()
-              ? <VisitedPage />
-              : <Redirect to={{pathname: '/'}} />)
-          }}/>
-          <Route path='/bucket-list' render={() => {
+          <Route path='/exercise-list' render={() => {
               return (TokenService.hasAuthToken()
-              ? <BucketListPage />
-              : <Redirect to={{pathname: '/'}} />)
+              ? <Dashboard />
+              : <Redirect to={{pathname: '/dashboard'}} />)
+          }} />
+          <Route path='/exercise-list' render={() => {
+              return (TokenService.hasAuthToken()
+              ? <ExerciseListPage />
+              : <Redirect to={{pathname: '/exercise-list'}} />)
+          }} />
+          <Route path='/add-exercise' render={() => {
+              return (TokenService.hasAuthToken()
+              ? <AddExercisePage/>
+              : <Redirect to={{pathname: '/add-exercise'}} />)
           }} />
           />
          <Route component={NotFoundPage} />

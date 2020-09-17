@@ -26,12 +26,13 @@ class Navigation extends Component  {
                     <div className='toolbar-toggle'>
                         <DrawerToggleButton onClick={this.context.drawerToggleButton}/>
                     </div>
-                        <Link className='nav_logo'to='/'><h2 className="logo">Trippster</h2></Link>
+                        <Link className='nav_logo'to='/'><h2 className="logo">Fitter</h2></Link>
                         {TokenService.hasAuthToken() ? <div className='spacer'></div> : ''}
                         {TokenService.hasAuthToken() ? <div className='nav'>
                         <NavLink className='nav-link' to='/'><h3>Home</h3></NavLink>
-                        <NavLink className='nav-link' to='/visited'><h3>Visited</h3></NavLink>
-                        <NavLink className='nav-link' to='/bucket-list'><h3>Bucket List</h3></NavLink>
+                        <NavLink className='nav-link' to='/dashboard'><h3>Dashboard</h3></NavLink>
+                        <NavLink className='nav-link' to='/exercise-list'><h3>Exercises List</h3></NavLink>
+                        <NavLink className='nav-link' to='/add-exercise'><h3>Add Exercise</h3></NavLink>
                         <NavLink className='nav-link' to="/" onClick={this.logOutClick}><h3>Log Out</h3></NavLink>
                     </div> : ''}
                 </nav>

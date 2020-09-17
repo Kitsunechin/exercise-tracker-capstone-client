@@ -15,12 +15,14 @@ This app is for logged in users only
 * As a new user 
 * I want to be able to create a new account
 * so that I can access the exercise tracker
-* As a new user and returning user 
-* I would like to be able to log out of my account
-* so that I can stop using the app
 * As a new user 
 * I want to be able to sign in into my account
 * so that I can start using my tracker
+
+#### Dashboard Page
+* As a new user and returning user 
+* I would like to be able to log out of my account
+* so that I can stop using the app
 
 #### Add Exercise Page
 * As a new and returning user 

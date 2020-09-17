@@ -26,11 +26,14 @@ class SideDrawer extends Component {
         <NavLink className='nav-link' to='/'>
             <h3 onClick={this.context.drawerToggleButton}>Home</h3>
         </NavLink>
-        <NavLink className='nav-link' to='/visited'>
-            <h3 onClick={this.context.drawerToggleButton}>Visited</h3>
+        <NavLink className='nav-link' to='/dashboard'>
+            <h3 onClick={this.context.drawerToggleButton}>Dashboard</h3>
         </NavLink>
-        <NavLink className='nav-link' to='/bucket-list'>
-            <h3 onClick={this.context.drawerToggleButton}>Bucket List</h3>
+        <NavLink className='nav-link' to='/exercise-list'>
+            <h3 onClick={this.context.drawerToggleButton}>Exercises List</h3>
+        </NavLink>
+        <NavLink className='nav-link' to='/add-exercise'>
+            <h3 onClick={this.context.drawerToggleButton}>Add Exercise</h3>
         </NavLink>
         <NavLink className='nav-link' to="/" onClick={this.logOutClick}>
             <h3 onClick={this.context.drawerToggleButton}>Log Out</h3>

@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 const Header = () => 
     (
         <header className="App-header">
-            <h1>Trippster</h1>
-            <div className='subtitle'>With Trippster you can plan your future travels and keep track of the places you have already visited
-           <span> Login or Register and start planning your next destination!</span>
+            <h1>Fitter</h1>
+            <div className='subtitle'>With Fitter you can keep track of your daily exercises
+           <span> Login or Register and start planning your next fit day!</span>
            </div>
         </header>
     );

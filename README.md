@@ -6,7 +6,7 @@ You can access a working prototype of the React app here: https://search-for-cou
 
 
 ## User Stories
-This app is for logged in users only
+This app is for logged in users and visitors
 
 #### Landing Page
 * As a new user 
@@ -20,6 +20,9 @@ This app is for logged in users only
 * so that I can start using my tracker
 
 #### Dashboard Page
+* As a new user and returning user
+* I would like to view my current exercise status
+* so that I can keep track of my results
 * As a new user and returning user 
 * I would like to be able to log out of my account
 * so that I can stop using the app
@@ -75,6 +78,12 @@ Exercise List
 :-------------------------:
 ![Exercise List View](github-images/wireframes/exercises-list.png)
 
+### Graybox wireframes
+* register wireframe https://repl.it/@Kitsunechin/Fitter-wireframe-Register#index.html
+* login wireframe https://repl.it/@Kitsunechin/Fitter-wireframe-Login#index.html
+* Dashboard wireframe https://repl.it/@Kitsunechin/Fitter-wireframe-dashboard#index.html
+* Add exercise wireframe https://repl.it/@Kitsunechin/Fitter-wireframe-Register#index.html
+* Exercises wireframe https://repl.it/@Kitsunechin/Fitter-wireframe-exercises#index.html
 
 ## Screenshots
 
@@ -89,15 +98,15 @@ Landing/Registration
 
 ## Functionality
 The app's functionality includes:
-* Every User has the ability to create an account
-* Every user can log in to his/her account 
-* Every user can view his/her exercises
-* Every user can add exercises to the list
-* Every user can see his/her weekly progress
+* Every visitor has the ability to create an account
+* Every registered user can log in to his/her account 
+* Every registered user can view his/her exercises
+* Every registered user can add exercises to the list
+* Every registered user can see his/her weekly progress
 
 ## React Components Structure
 * __Index.js__ (stateless)
-    * __App.js__ (statfull)
+    * __App.js__ (statefull)
         * __RegistartionPage.js__ (statefull)
         * __LoginPage.js__ (statefull)
         * __Navigation.js__ (stateless)
@@ -109,14 +118,6 @@ The app's functionality includes:
         * __Exercises.js__ (statefull) 
 
 ## Business Objects (back-end structure)
-* countries (database table)
-    * id 
-    * iso (country iso (2 letters) code)
-    * name (country original name)
-    * nicename (country shortcuted name)
-    * iso3 (country iso3 (3 letters) code)
-    * numcode (country numeric code)
-    * phonecode (country phonecode)
 
 * users (database table)
     * id 
@@ -124,24 +125,20 @@ The app's functionality includes:
     * user_password ( at least one number, one lowercase and one uppercase letter, at least eight characters that are letters, numbers or the underscore)
     * user_email (email validation)
 
-* users_countries (database table)
+* exercises (database table)
     * id 
     * user_id (connnection with id from users table)
-    * country_id ( connection with the id from the countries table)
-    * is_visited (boolean default 0,1 if it is visited)
-    * is_wish_list (boolean default 0,1 if it is wishlist)
-    
-* users_notes (database table)
-    * id
-    * user_country_id
-    * note_content
+    * name (country original name)
+    * exercise_length (numeric)
+    * date (timestamp)
+    * notes (varchar 255)
 
 ## Technology
 * Front-End: HTML5, CSS3, JavaScript ES6, React
 * Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
 * Development Environment: Heroku, DBeaver
 
-## API Documentation
+## API Documentation - TODO
 API Documentation details:
 * get all notes => /api/notes
 * post notes => /api/notes
@@ -160,7 +157,7 @@ API Documentation details:
 ## Responsive
 App is built to be usable on mobile devices, as well as responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
-## Development Roadmap
+## Development Roadmap - TODO
 This is v1.0 of the app, but future enhancements are expected to include:
 * add additional info on the visited countries(summary of the visit, pictures,)
 * add additional info on the bucket-list countries(time of planned visit, summary of the planned visit)

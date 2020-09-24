@@ -20,6 +20,7 @@ body {
 
 input {
     padding: 7px;
+    border-radius: 5px;
 }
 
 
@@ -48,4 +49,19 @@ button, input {
 .error-message {
     color: red;
     font-size: 1rem;
+}
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.zen {
+    margin-top: 120px;
+}
+
+@media (max-width: 812px) {
+    .zen {
+        display: none;
+    }
 }

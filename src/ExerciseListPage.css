@@ -1,0 +1,36 @@
+.exercise-element {
+    margin-top: 100px;
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.exerciseForm {
+    padding: 0;
+}
+
+.exerciseDeleteBtn {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.outer-container {
+    display: flex;
+}
+
+.image {
+    margin-top: 100px
+}
+
+@media (max-width: 812px) {
+    .outer-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%
+    }
+    .image {
+        display: none;
+    }
+}

@@ -3,7 +3,7 @@ import config from './config';
 import TokenService from './services/token-service.js';
 
 import './ExerciseListPage.css'
-
+import work from './images/letsgo.png';
 
 export default class ExerciseListPage extends React.Component {
     constructor(props) {
@@ -13,9 +13,6 @@ export default class ExerciseListPage extends React.Component {
           exercisesList: []
         };
       };
-
-
-
 
       deleteExercise(event) {
         event.preventDefault()
@@ -49,21 +46,6 @@ export default class ExerciseListPage extends React.Component {
         })
     
       }
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       
       componentDidMount() {
         const url = `${config.API_ENDPOINT}/exercise/user/${TokenService.getUserId()}`;
@@ -145,10 +127,11 @@ export default class ExerciseListPage extends React.Component {
     render() {
     let showExercise = this.state.exercisesList.map((exercise, key) => {         
             return (
-                <div key={key}>
-                <p>{exercise.name}</p>
-                <p>{exercise.exercise_length}</p>
-                <p>{exercise.date}</p>
+                <div className="exercise-element" key={key}>
+                <p>name of the exercise: {exercise.name}</p>
+                <p>length of the exercise: {exercise.exercise_length} min</p>
+                <p>date of the exercise: {(exercise.date).slice(0, 10)}</p>
+                <p>note: {exercise.notes}</p>
                 <form className="exerciseForm"onSubmit={this.deleteExercise}>
                     <input type='hidden' name='exerciseId' defaultValue={exercise.id}></input>
                     <button type='submit' className='exerciseDeleteBtn'>Delete Exercise</button>
@@ -157,7 +140,8 @@ export default class ExerciseListPage extends React.Component {
         })
             return(
                 <div className="outer-container">
-                <div className="container">
+                <div className="image"><img src={work} width="500" height="300"></img></div>
+                <div className="inner-container">
                     {showExercise}
                 </div>
                 </div>

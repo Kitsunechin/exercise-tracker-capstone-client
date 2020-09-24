@@ -2,7 +2,8 @@ import React from 'react';
 import config from './config';
 import TokenService from './services/token-service.js';
 
-import './AddExercisePage.css'
+import './AddExercisePage.css';
+import zen from './images/zen.png';
 
 export default class AddExercisePage extends React.Component {
     constructor(props) {
@@ -81,6 +82,7 @@ export default class AddExercisePage extends React.Component {
       }
 render() {
 return(
+    <div className="outer-container">
     <div className="inner-container">
           <form className="add-exercise" onSubmit={this.handleSubmit}>
           <div className="box">
@@ -121,11 +123,13 @@ return(
             </div>
   
             <button
-              type="submit"
+              className="add-exercise-btn" type="submit"
               >Submit</button>
           
           </div>
           </form>
+        </div>
+        <div className="zen"><img src={zen} width="300" height="300"></img></div>
         </div>
 )
 }

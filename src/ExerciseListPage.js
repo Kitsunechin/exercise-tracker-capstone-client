@@ -55,12 +55,24 @@ export default class ExerciseListPage extends React.Component {
             })
           })
         }
-render() {
-return(
-    <div className="outer-container">
-    <div className="container">
-    </div>
-    </div>
-)
-}
+    render() {
+    let showExercise = this.state.exercisesList.map((exercise, key) => {         
+            return (
+                <div key={key}>
+                <p>{exercise.name}</p>
+                <p>{exercise.exercise_length}</p>
+                <p>{exercise.date}</p>
+                </div>)     
+        })
+            return(
+                <div className="outer-container">
+                <div className="container">
+                    <p>
+                        Hello World
+                    </p>
+                    {showExercise}
+                </div>
+                </div>
+            )
+    }
 }

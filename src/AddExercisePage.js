@@ -14,7 +14,7 @@ export default class AddExercisePage extends React.Component {
       };
       handleSubmit = (e) => {
         e.preventDefault();
-        let user_id = 2
+        let user_id = TokenService.getUserId()
         //create an object to store the search filters
         const data = {};
     
@@ -71,7 +71,7 @@ export default class AddExercisePage extends React.Component {
           // use the json api output and assign to a variable
           .then(data => {
               console.log(data)
-            // window.location = `/exercise-list`
+            window.location = `/exercise-list`
           })
           .catch(err => {
             this.setState({

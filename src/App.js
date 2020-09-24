@@ -59,7 +59,7 @@ render() {
         <Route exact path='/' render={() => {
             return <LandingPage />
           }}/>
-          <Route path='/exercise-list' render={() => {
+          <Route path='/dashboard' render={() => {
               return (TokenService.hasAuthToken()
               ? <Dashboard />
               : <Redirect to={{pathname: '/dashboard'}} />)

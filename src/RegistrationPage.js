@@ -101,7 +101,7 @@ export default class RegistrationPage extends React.Component {
               } else {
                 TokenService.saveAuthToken(response.authToken)
                 TokenService.saveUserId(response.id)
-                window.location = '/visited'
+                window.location = '/exercise-list'
               }     
             }) 
             .catch(res => {
@@ -116,7 +116,6 @@ export default class RegistrationPage extends React.Component {
       const errorMessage = this.state.error ? <p className="error-message">{this.state.error}</p> : false
       return (
         <div className="inner-container">
-          {/* {TokenService.getUserId()}  */}
           <form className="add-user" onSubmit={this.handleSubmit}>
           {errorMessage}
           <div className="box">

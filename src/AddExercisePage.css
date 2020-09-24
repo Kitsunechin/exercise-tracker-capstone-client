@@ -1,0 +1,51 @@
+body {
+    background-color: lightgray;
+}
+
+.add-exercise {
+    margin: 50px
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 7px;
+}
+
+
+.inner-container {
+    padding-bottom: 40px;
+}
+
+.main-box {
+    font-size: 1.5rem;
+}
+
+button, input {
+    font-size: 1rem;
+}
+
+@media (min-width: 696px) {
+    .box-container {
+        width: 30%;
+    }
+    .box-controller {
+        width: 30%;
+        margin-top: 0px 
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+}

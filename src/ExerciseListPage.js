@@ -13,6 +13,57 @@ export default class ExerciseListPage extends React.Component {
           exercisesList: []
         };
       };
+
+
+
+
+      deleteExercise(event) {
+        event.preventDefault()
+    
+        const data = {}
+    
+        const formData = new FormData(event.target)
+    
+        for (let value of formData) {
+            data[value[0]] = value[1]
+        }
+    
+        console.log(data)
+        const requestOptions = {
+          method: 'DELETE'
+        };
+    
+        let { exerciseId } = data
+        
+        fetch(`${config.API_ENDPOINT}/exercise/${exerciseId}`, {
+          method: 'DELETE',
+          headers: {
+            'content-type': 'application/json',
+          }
+    
+        })
+    
+        .then(response => {
+    
+          window.location = `/exercise-list`
+        })
+    
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
       componentDidMount() {
         const url = `${config.API_ENDPOINT}/exercise/user/${TokenService.getUserId()}`;
@@ -55,6 +106,42 @@ export default class ExerciseListPage extends React.Component {
             })
           })
         }
+        deleteexercise(event) {
+    event.preventDefault()
+
+    const data = {}
+
+    const formData = new FormData(event.target)
+
+    for (let value of formData) {
+        data[value[0]] = value[1]
+    }
+
+    console.log(data)
+
+    let {exerciseId, collectionId } = data;
+    console.log(exerciseId, collectionId)
+    const requestOptions = {
+      method: 'DELETE'
+    };
+
+
+    
+    fetch(`${config.API_ENDPOINT}/exercises/exercise/${exerciseId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+      }
+
+    })
+
+    .then(response => {
+
+      window.location = `/exerciselist/show/${collectionId}`
+    })
+
+  }
+  
     render() {
     let showExercise = this.state.exercisesList.map((exercise, key) => {         
             return (
@@ -62,14 +149,15 @@ export default class ExerciseListPage extends React.Component {
                 <p>{exercise.name}</p>
                 <p>{exercise.exercise_length}</p>
                 <p>{exercise.date}</p>
+                <form className="exerciseForm"onSubmit={this.deleteExercise}>
+                    <input type='hidden' name='exerciseId' defaultValue={exercise.id}></input>
+                    <button type='submit' className='exerciseDeleteBtn'>Delete Exercise</button>
+                </form> 
                 </div>)     
         })
             return(
                 <div className="outer-container">
                 <div className="container">
-                    <p>
-                        Hello World
-                    </p>
                     {showExercise}
                 </div>
                 </div>

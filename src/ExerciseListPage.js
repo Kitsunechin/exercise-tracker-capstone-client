@@ -2,7 +2,7 @@ import React from 'react';
 import config from './config';
 import TokenService from './services/token-service.js';
 
-import './ExerciseListPage.css'
+import './ExerciseListPage.css';
 import work from './images/letsgo.png';
 
 export default class ExerciseListPage extends React.Component {

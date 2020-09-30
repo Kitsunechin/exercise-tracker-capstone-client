@@ -89,11 +89,23 @@ Exercise List
 
 Landing/Login Page
 :-------------------------:
-![Landing/Login Page]()
+![Landing/Login Page](/github-images/screenshots/login.png)
 
 Landing/Registration
 :-------------------------:
-![Landing/Registration Page]()
+![Landing/Registration Page](/github-images/screenshots/register.png)
+
+Add Exercise
+:-------------------------:
+![Add Exercise Page](/github-images/screenshots/add-exercise.png)
+
+Dashboard
+:-------------------------:
+![Dashboard Page](/github-images/screenshots/dashboard.png)
+
+Exercise List
+:-------------------------:
+![Exercise List](/github-images/screenshots/exercise-list.png)
 
 
 ## Functionality
@@ -140,28 +152,20 @@ The app's functionality includes:
 
 ## API Documentation - TODO
 API Documentation details:
-* get all notes => /api/notes
-* post notes => /api/notes
-* get all users => /api/users
+* get all exercises by users => /api/exercise/user/:user_id
 * get users by id => /api/users/:user_id
-* get all countries => /api/all
-* get countries by id => /api/all/:country_id
-* post countries => /api/all
-* get visited countries => /api/visited
-* get visited countries by id => /api/visited/:country_id
-* post visited countries => /api/visited
-* get bucket-list countries => /api/bucket-list
-* get bucket-list countries by id => /api/bucket-list/:country_id
-* post visited countries => /api/visited
+* post exercises => api/exercise
+* post login users => /api/auth/login
+* post registered users => /api/users
+* delete exercise by id => /api/exercise/:exercise_id
 
 ## Responsive
 App is built to be usable on mobile devices, as well as responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
 ## Development Roadmap - TODO
 This is v1.0 of the app, but future enhancements are expected to include:
-* add additional info on the visited countries(summary of the visit, pictures,)
-* add additional info on the bucket-list countries(time of planned visit, summary of the planned visit)
-* adding a delete button to the bucket-list countries
+* add additional info on the exercise (summary of the exercise, pictures,)
+* adding a patch button to the exercise
 
 
 ## How to run it

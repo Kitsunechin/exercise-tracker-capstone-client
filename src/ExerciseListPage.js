@@ -25,7 +25,6 @@ export default class ExerciseListPage extends React.Component {
             data[value[0]] = value[1]
         }
     
-        console.log(data)
         const requestOptions = {
           method: 'DELETE'
         };
@@ -71,7 +70,6 @@ export default class ExerciseListPage extends React.Component {
           })
           // use the json api output
           .then(data => {
-            console.log(data)
             //check if there is meaningfull data
             // check if there are no results
             if (data.totalItems === 0) {
@@ -80,7 +78,6 @@ export default class ExerciseListPage extends React.Component {
             this.setState({
                 exercisesList: data
             })
-            console.log(data)
           })
           .catch(err => {
             this.setState({
@@ -88,50 +85,15 @@ export default class ExerciseListPage extends React.Component {
             })
           })
         }
-        deleteexercise(event) {
-    event.preventDefault()
-
-    const data = {}
-
-    const formData = new FormData(event.target)
-
-    for (let value of formData) {
-        data[value[0]] = value[1]
-    }
-
-    console.log(data)
-
-    let {exerciseId, collectionId } = data;
-    console.log(exerciseId, collectionId)
-    const requestOptions = {
-      method: 'DELETE'
-    };
-
-
-    
-    fetch(`${config.API_ENDPOINT}/exercises/exercise/${exerciseId}`, {
-      method: 'DELETE',
-      headers: {
-        'content-type': 'application/json',
-      }
-
-    })
-
-    .then(response => {
-
-      window.location = `/exerciselist/show/${collectionId}`
-    })
-
-  }
   
     render() {
     let showExercise = this.state.exercisesList.map((exercise, key) => {         
             return (
                 <div className="exercise-element" key={key}>
-                <p>name of the exercise: {exercise.name}</p>
-                <p>length of the exercise: {exercise.exercise_length} min</p>
-                <p>date of the exercise: {(exercise.date).slice(0, 10)}</p>
-                <p>note: {exercise.notes}</p>
+                <p><span>name of the exercise: </span>{exercise.name}</p>
+                <p><span>length of the exercise: </span>{exercise.exercise_length} min</p>
+                <p><span>date of the exercise: </span>{(exercise.date).slice(0, 10)}</p>
+                <p><span>note: </span>{exercise.notes}</p>
                 <form className="exerciseForm"onSubmit={this.deleteExercise}>
                     <input type='hidden' name='exerciseId' defaultValue={exercise.id}></input>
                     <button type='submit' className='exerciseDeleteBtn'>Delete Exercise</button>
@@ -140,10 +102,10 @@ export default class ExerciseListPage extends React.Component {
         })
             return(
                 <div className="outer-container">
-                <div className="image"><img src={work} width="500" height="300"></img></div>
                 <div className="inner-container">
                     {showExercise}
                 </div>
+                <div className="image"><img src={work} width="500" height="300"></img></div>
                 </div>
             )
     }

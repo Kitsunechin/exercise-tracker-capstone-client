@@ -49,7 +49,7 @@ export default class AddExercisePage extends React.Component {
             date,
             notes
         };
-        console.log(newExercise)
+        // console.log(newExercise)
     
     
         //useing the url and paramters above make the api call
@@ -92,15 +92,17 @@ return(
                 type="text"
                 name="name"
                 className="login-input"
+                placeholder="running"
                 required/>
             </div>
   
             <div className="input-group">
-              <label htmlFor="length">Length of exercise</label>
+              <label htmlFor="length">Length of exercise in minutes</label>
               <input
                 type="text"
                 name="exercise_length"
                 className="length-exercise"
+                placeholder="10"
                 required/>
             </div>
 
@@ -119,6 +121,7 @@ return(
                 type="text"
                 name="notes"
                 className="notes"
+                placeholder="Your notes go here"
                 required/>
             </div>
   

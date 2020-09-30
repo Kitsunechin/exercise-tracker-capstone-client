@@ -1,0 +1,12 @@
+.summary {
+    font-size: 3rem;
+    padding: 1rem
+}
+
+.outer-box{
+    display: felx;
+}
+
+.box {
+    display: inline
+}

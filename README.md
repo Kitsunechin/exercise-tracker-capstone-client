@@ -2,7 +2,7 @@
 The app allows its users to keep track of their daily exercise routine
 
 ## Working Prototype
-You can access a working prototype of the React app here: https://search-for-country-to-visit-casptone-client.vercel.app/ and Node app here: https://country-search-server-app.herokuapp.com
+You can access a working prototype of the React app here: https://exercise-tracker-capstone-client.vercel.app/ and Node app here: https://exercise-tracker-cap-server.herokuapp.com/
 
 
 ## User Stories

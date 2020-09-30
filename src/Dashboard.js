@@ -119,10 +119,11 @@ render() {
             </div>)     
     })
 return(
-    <div className="outer-container">
-    <div className="container">
+    <div className="outer-box">
+    <div className="box">
         {showBadge}
     </div>
+    <p className="summary">Congratulations, this is your status prize!!!</p>
     </div>
 )
 }

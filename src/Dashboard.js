@@ -97,11 +97,18 @@ render() {
     else if (this.state.consecutiveValue > 3){
       showBadge = <div className="exercise-div">
         <img src={secondPrize}></img>
+        <p className="summary">Congratulations, this is your prize for exercises!!!</p>
       </div>
     }
-    else if (this.state.consecutiveValue > 1){
+    else if (this.state.consecutiveValue >= 1){
       showBadge = <div className="exercise-div">
         <img src={thirdPrize}></img>
+        <p className="summary">Congratulations, this is your prize for exercises!!!</p>
+      </div>
+    }
+    else if (this.state.consecutiveValue < 1){
+      showBadge = <div className="exercise-div">
+        <p className="prize">no prize for consecutive days of exercises, keep trying</p>
       </div>
     }
     let showExercise = this.state.exercisesList.map((exercise, key) => {  
@@ -123,7 +130,6 @@ return(
     <div className="box">
         {showBadge}
     </div>
-    <p className="summary">Congratulations, this is your status prize!!!</p>
     </div>
 )
 }

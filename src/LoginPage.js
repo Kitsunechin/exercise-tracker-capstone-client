@@ -86,7 +86,7 @@ export default class LoginPage extends React.Component {
         password = ''
         TokenService.saveAuthToken(response.authToken)
         TokenService.saveUserId(response.userId)
-        window.location ='/exercise-list'
+        window.location ='/add-exercise'
       })
       .then(response => {
       

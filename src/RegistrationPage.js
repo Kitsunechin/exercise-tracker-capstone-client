@@ -102,7 +102,7 @@ export default class RegistrationPage extends React.Component {
               } else {
                 TokenService.saveAuthToken(response.authToken)
                 TokenService.saveUserId(response.id)
-                window.location = '/exercise-list'
+                window.location = '/add-exercise'
               }     
             }) 
             .catch(res => {

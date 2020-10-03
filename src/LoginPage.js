@@ -114,7 +114,7 @@ export default class LoginPage extends React.Component {
             </div>
   
             <div className="input-group">
-              <label htmlFor="password">Password: Kitsune666</label>
+              <label htmlFor="password">Password: Kitsune666!</label>
               <input
                 type="password"
                 name="password"

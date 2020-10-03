@@ -79,7 +79,7 @@ export default class RegistrationPage extends React.Component {
       }
       else if (this.validatePassword(password) === '') {
         this.setState({
-            error: 'password is not valid'
+            error: 'password has to be at least eight characters that are letters, numbers or the underscore'
         });
       }
       else {

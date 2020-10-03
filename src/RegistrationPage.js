@@ -45,8 +45,9 @@ export default class RegistrationPage extends React.Component {
     validatePassword(inputPassword){
       let outputPassword = inputPassword;
       // at least one number, one lowercase and one uppercase letter
-      // at least eight characters that are letters, numbers or the underscore
-      let passwordformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
+      // at least eight characters that are letters, numbers and special character
+      //let passwordformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
+      let passwordformat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       if(!inputPassword.match(passwordformat)) {
           outputPassword = ""
       }
@@ -79,7 +80,7 @@ export default class RegistrationPage extends React.Component {
       }
       else if (this.validatePassword(password) === '') {
         this.setState({
-            error: 'password has to be at least eight characters that are letters and at least one number, one lowercase and one uppercase letter and no special characters'
+            error: 'password has to be at least eight characters that are letters and at least one number, one lowercase and one uppercase letter and special character'
         });
       }
       else {

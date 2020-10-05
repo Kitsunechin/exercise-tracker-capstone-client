@@ -29,7 +29,6 @@ class Navigation extends Component  {
                         <Link className='nav_logo'to='/'><h2 className="logo">Fitter</h2></Link>
                         {TokenService.hasAuthToken() ? <div className='spacer'></div> : ''}
                         {TokenService.hasAuthToken() ? <div className='nav'>
-                        <NavLink className='nav-link' to='/'><h3>Home</h3></NavLink>
                         <NavLink className='nav-link' to='/dashboard'><h3>Dashboard</h3></NavLink>
                         <NavLink className='nav-link' to='/exercise-list'><h3>Exercises List</h3></NavLink>
                         <NavLink className='nav-link' to='/add-exercise'><h3>Add Exercise</h3></NavLink>

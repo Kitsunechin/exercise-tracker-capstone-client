@@ -23,9 +23,6 @@ class SideDrawer extends Component {
     return(
     <nav className={drawerClasses}>
         <div className='menu-list'>
-        <NavLink className='nav-link' to='/'>
-            <h3 onClick={this.context.drawerToggleButton}>Home</h3>
-        </NavLink>
         <NavLink className='nav-link' to='/dashboard'>
             <h3 onClick={this.context.drawerToggleButton}>Dashboard</h3>
         </NavLink>

@@ -79,7 +79,7 @@ export default class AddExercisePage extends React.Component {
               error: err.message
             })
           }) 
-      }
+      };
 render() {
 return(
     <div className="outer-container">
@@ -89,6 +89,7 @@ return(
             <div className="input-group">
               <label htmlFor="exercise">Type of Exercise</label>
               <input
+                id="exercise"
                 type="text"
                 name="name"
                 className="login-input"
@@ -99,6 +100,7 @@ return(
             <div className="input-group">
               <label htmlFor="length">Length of exercise in minutes</label>
               <input
+                id="length"
                 type="text"
                 name="exercise_length"
                 className="length-exercise"
@@ -109,6 +111,7 @@ return(
             <div className="input-group">
               <label htmlFor="date">Date</label>
               <input
+                id="date"
                 type="date"
                 name="date"
                 className="date"
@@ -118,6 +121,7 @@ return(
             <div className="input-group">
               <label htmlFor="notes">Notes</label>
               <textarea
+                id="notes"
                 type="text"
                 name="notes"
                 className="notes"

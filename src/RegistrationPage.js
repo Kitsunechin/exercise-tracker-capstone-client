@@ -108,7 +108,7 @@ export default class RegistrationPage extends React.Component {
             .catch(res => {
                 this.setState({ error: res.error })
             }) 
-      }
+      };
      
     };
   
@@ -124,6 +124,7 @@ export default class RegistrationPage extends React.Component {
             <div className="input-group">
               <label htmlFor="username">Username</label>
               <input
+                id="username"
                 type="text"
                 name="username"
                 className="login-input"
@@ -135,6 +136,7 @@ export default class RegistrationPage extends React.Component {
             <div className="input-group">
               <label htmlFor="email">Email</label>
               <input 
+              id="email"
               type="text" 
               name="email" 
               className="login-input" 
@@ -145,6 +147,7 @@ export default class RegistrationPage extends React.Component {
             <div className="input-group">
               <label htmlFor="password">Password</label>
               <input
+                id="password"
                 type="password"
                 name="password"
                 className="login-input"

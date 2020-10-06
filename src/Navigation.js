@@ -37,8 +37,8 @@ class Navigation extends Component  {
                 </nav>
             </div>
         )
-   }
-}
+   };
+};
 
 
 export default Navigation

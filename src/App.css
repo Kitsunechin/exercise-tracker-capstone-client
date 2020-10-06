@@ -20,8 +20,8 @@ body {
 
 button, #delete-note{
   display: block;
-  background-color: palevioletred;
-  color: white;
+  background-color: #D99BAF;
+  color: black;
   border: none;
   margin-top: 1em;
 }

@@ -94,7 +94,7 @@ export default class LoginPage extends React.Component {
       .catch(err => {
       });   
      
-    }
+    };
   
     render() {
       const errorMessage = this.state.error ? <p className="error-message">{this.state.error}</p> : false
@@ -106,6 +106,7 @@ export default class LoginPage extends React.Component {
             <div className="input-group">
               <label htmlFor="username">Username: Kitsune</label>
               <input
+                id="username"
                 type="text"
                 name="username"
                 className="login-input"
@@ -116,6 +117,7 @@ export default class LoginPage extends React.Component {
             <div className="input-group">
               <label htmlFor="password">Password: Kitsune666!</label>
               <input
+                id="password"
                 type="password"
                 name="password"
                 className="login-input"

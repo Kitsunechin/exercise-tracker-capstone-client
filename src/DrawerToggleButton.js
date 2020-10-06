@@ -13,7 +13,7 @@ class DrawerToggleButton extends React.Component {
                 <div className="toggle-button_line"></div>
             </button>
     )
-    }   
-}
+    };  
+};
 
 export default DrawerToggleButton;

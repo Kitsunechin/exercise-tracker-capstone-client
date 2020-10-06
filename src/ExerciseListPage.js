@@ -42,9 +42,9 @@ export default class ExerciseListPage extends React.Component {
         .then(response => {
     
           window.location = `/exercise-list`
-        })
+        });
     
-      }
+      };
       
       componentDidMount() {
         const url = `${config.API_ENDPOINT}/exercise/user/${TokenService.getUserId()}`;
@@ -84,7 +84,7 @@ export default class ExerciseListPage extends React.Component {
               error: err.message
             })
           })
-        }
+        };
   
     render() {
     let showExercise = this.state.exercisesList.map((exercise, key) => {         

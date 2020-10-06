@@ -19,7 +19,7 @@ class SideDrawer extends Component {
         let drawerClasses = 'side-drawer';
     if (this.props.show) {
         drawerClasses = 'side-drawer open'
-    }
+    };
     return(
     <nav className={drawerClasses}>
         <div className='menu-list'>
@@ -38,6 +38,6 @@ class SideDrawer extends Component {
         </div>
     </nav>
     )
-    }
-}
+    };
+};
 export default SideDrawer

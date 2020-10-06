@@ -26,6 +26,11 @@ button, #delete-note{
   margin-top: 1em;
 }
 
+button:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
 form {
   text-align: left;
   padding-top: 2em;

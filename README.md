@@ -153,8 +153,6 @@ The app's functionality includes:
 ## API Documentation
 API Documentation details:
 * get all exercises by users => /api/exercise/user/:user_id
-* get users by id => /api/users/:user_id
-* post exercises => api/exercise
 ```json
 [
     {
@@ -167,14 +165,40 @@ API Documentation details:
     }
 ]
 ```
+* post exercises => api/exercise
+```json
+{
+    "id": 3,
+    "user_id": 1,
+    "name": "jogging",
+    "exercise_length": 30,
+    "date": "2020-09-21T16:52:40.000Z",
+    "notes": "notes added"
+}
+```
 * post login users => /api/auth/login
+```json
+{
+    "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2MDIxNzQzNTksInN1YiI6Ik1pY2hhZWwifQ.l6e9Wk39rLfqMdlo8R9nJJEYIDmptqiYOwvAvqrzjos",
+    "userId": 1
+}
+```
 * post registered users => /api/users
+```json
+{
+    "id": 4,
+    "user_name": "Kathrine"
+}
+```
 * delete exercise by id => /api/exercise/:exercise_id
+```json
+204 No Content
+```
 
 ## Responsive
 App is built to be usable on mobile devices, as well as responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
-## Development Roadmap - TODO
+## Development Roadmap 
 This is v1.0 of the app, but future enhancements are expected to include:
 * add additional info on the exercise (summary of the exercise, pictures,)
 * adding a patch button to the exercise

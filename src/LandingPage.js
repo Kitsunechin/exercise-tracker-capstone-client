@@ -34,7 +34,7 @@ export default class LandingPage extends React.Component {
          : "")}
          onClick={this
          .showLoginBox}>
-         Login
+         Register
        </div>
        <div
          className={"controller " + (this.state.isRegisterOpen
@@ -42,7 +42,7 @@ export default class LandingPage extends React.Component {
          : "")}
          onClick={this
          .showRegisterBox}>
-         Register
+         Login
        </div>
      </div>
         <div className="box-container">

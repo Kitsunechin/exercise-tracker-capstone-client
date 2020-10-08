@@ -9,8 +9,7 @@ import TokenService from './services/token-service.js';
 import NotFoundPage from './NotFoundPage';
 import LandingPage from './LandingPage';
 import Navigation from './Navigation';
-// import BucketListPage from './___BucketListPage';
-// import VisitedPage from './__VisitedPage';
+
 import Dashboard from './Dashboard'
 import ExerciseListPage from './ExerciseListPage'
 import AddExercisePage from './AddExercisePage'

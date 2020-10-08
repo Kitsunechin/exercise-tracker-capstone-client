@@ -150,11 +150,23 @@ The app's functionality includes:
 * Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
 * Development Environment: Heroku, DBeaver
 
-## API Documentation - TODO
+## API Documentation
 API Documentation details:
 * get all exercises by users => /api/exercise/user/:user_id
 * get users by id => /api/users/:user_id
 * post exercises => api/exercise
+```json
+[
+    {
+        "id": 27,
+        "user_id": 3,
+        "name": "weight lifting",
+        "exercise_length": 20,
+        "date": "2020-10-05T22:00:00.000Z",
+        "notes": "lifting heavy weigths"
+    }
+]
+```
 * post login users => /api/auth/login
 * post registered users => /api/users
 * delete exercise by id => /api/exercise/:exercise_id

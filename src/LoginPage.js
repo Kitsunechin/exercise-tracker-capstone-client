@@ -82,17 +82,20 @@ export default class LoginPage extends React.Component {
       })
   
       .then(response => {
+        console.log(response)
         username = ''
         password = ''
-        TokenService.saveAuthToken(response.authToken)
-        TokenService.saveUserId(response.userId)
-        window.location ='/add-exercise'
-      })
-      .then(response => {
-      
-      })
-      .catch(err => {
-      });   
+        if(response === undefined) {
+          this.setState({ error: "user name or password not found" })
+        } else {
+          TokenService.saveAuthToken(response.authToken)
+          TokenService.saveUserId(response.id)
+          window.location = '/add-exercise'
+        }     
+      }) 
+      .catch(res => {
+          this.setState({ error: res.error })
+      });    
      
     };
   

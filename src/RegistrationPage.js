@@ -161,5 +161,5 @@ export default class RegistrationPage extends React.Component {
           </form>
         </div>
       );
-    }
-  }
+    };
+  };

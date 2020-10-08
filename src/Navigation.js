@@ -12,7 +12,7 @@ import './Navigation.css';
 class Navigation extends Component  {
     static contextType = AppContext;
     logOutClick = () => {
-    //   console.log('Logging out')
+    //console.log('Logging out')
       TokenService.clearAuthToken()
       TokenService.getUserId = (id) => { 
       }

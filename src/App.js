@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect} from 'react-router-dom';
 
-// import config from './config'
 import './App.css';
 import AppContext from './AppContext';
 import TokenService from './services/token-service.js';
@@ -22,7 +21,7 @@ export default class App extends React.Component {
   state = {
     sideDrawerOpen: false,
   };
-  /////needed//////
+  
   drawerToggleButton = () => {
     this.setState((prevState) => {
       return {sideDrawerOpen: !prevState.sideDrawerOpen}
@@ -36,10 +35,8 @@ export default class App extends React.Component {
 
 render() {
   const contextValue = {
-    drawerToggleButton: this.drawerToggleButton, ///needed
+    drawerToggleButton: this.drawerToggleButton,
   };
-  
-
 
   let backdrop;
 

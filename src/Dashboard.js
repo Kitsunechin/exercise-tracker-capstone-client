@@ -54,10 +54,6 @@ export default class DashboardPage extends React.Component {
                 allDates.push(data[j].date)
             }
             
-            // console.log(allDates)
-
-
-
             //check for consecutive exercise dates
             
             let consecutive = 0;
@@ -65,9 +61,7 @@ export default class DashboardPage extends React.Component {
             for (let i = 0; i < allDates.length - 1; i++){
                 let today= new Date(allDates[i])
                 let tomorrow= new Date(allDates[i+1])
-                //console.log(today,tomorrow)
-                //console.log(today.valueOf())
-                //console.log(tomorrow.valueOf())
+              
 
                 if ((tomorrow.valueOf() - today.valueOf()) === 86400000){                
                     consecutive++;
@@ -124,7 +118,7 @@ render() {
                 <button type='submit' className='exerciseDeleteBtn'>Delete Exercise</button>
             </form> 
             </div>)     
-    })
+    });
 return(
     <div className="outer-box">
     <div className="box">
@@ -132,5 +126,5 @@ return(
     </div>
     </div>
 )
-}
-}
+};
+};

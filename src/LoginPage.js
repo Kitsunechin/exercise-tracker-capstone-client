@@ -37,7 +37,7 @@ export default class LoginPage extends React.Component {
       let outputPassword = inputPassword;
       // at least one number, one lowercase and one uppercase letter
       // at least eight characters that are letters, numbers or the underscore
-      let passwordformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
+      let passwordformat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       if(!inputPassword.match(passwordformat)) {
           outputPassword = ""
       }
@@ -68,7 +68,8 @@ export default class LoginPage extends React.Component {
         this.setState({
             error: 'password is not valid'
         });
-      };
+      }
+      
       //assigning the object from the form data to params in the state
       this.setState({
           params: data
@@ -82,20 +83,16 @@ export default class LoginPage extends React.Component {
       })
   
       .then(response => {
-        console.log(response)
         username = ''
         password = ''
-        if(response === undefined) {
-          this.setState({ error: "user name or password not found" })
-        } else {
-          TokenService.saveAuthToken(response.authToken)
-          TokenService.saveUserId(response.id)
-          window.location = '/add-exercise'
-        }     
-      }) 
-      .catch(res => {
-          this.setState({ error: res.error })
-      });    
+        TokenService.saveAuthToken(response.authToken)
+        TokenService.saveUserId(response.userId)
+        window.location ='/add-exercise'
+      })
+      .then(response => { 
+      })
+      .catch(err => {
+      });   
      
     };
   

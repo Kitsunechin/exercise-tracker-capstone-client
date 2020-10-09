@@ -107,6 +107,6 @@ export default class ExerciseListPage extends React.Component {
                 </div>
                 <div className="image"><img src={work} width="500" height="300"></img></div>
                 </div>
-            )
-    }
-}
+            );
+    };
+};

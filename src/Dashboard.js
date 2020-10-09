@@ -125,6 +125,6 @@ return(
         {showBadge}
     </div>
     </div>
-)
+);
 };
 };

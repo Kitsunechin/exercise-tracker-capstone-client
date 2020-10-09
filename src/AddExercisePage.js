@@ -138,6 +138,6 @@ return(
         </div>
         <div className="zen"><img src={zen} width="300" height="300"></img></div>
         </div>
-)
-}
-}
+);
+};
+};

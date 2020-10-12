@@ -22,6 +22,9 @@ const TokenService = {
     },
     getUserId(user_id) {
         return window.sessionStorage.getItem('user_id', user_id)
+    },
+    getCurrentLoggedInUser() {
+        return window.sessionStorage.getItem('user_id')
     }
 
 }

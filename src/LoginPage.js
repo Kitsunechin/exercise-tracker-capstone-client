@@ -83,13 +83,13 @@ export default class LoginPage extends React.Component {
       })
   
       .then(response => {
-        username = ''
-        password = ''
-        TokenService.saveAuthToken(response.authToken)
-        TokenService.saveUserId(response.userId)
-        window.location ='/add-exercise'
-      })
-      .then(response => { 
+        if(response === undefined) {
+          this.setState({ error: "wrong username or password" })
+        } else {
+          TokenService.saveAuthToken(response.authToken)
+          TokenService.saveUserId(response.userId)
+          window.location = '/add-exercise'
+        }     
       })
       .catch(err => {
       });   

@@ -47,7 +47,9 @@ export default class ExerciseListPage extends React.Component {
       };
       
       componentDidMount() {
-        const url = `${config.API_ENDPOINT}/exercise/user/${TokenService.getUserId()}`;
+        let logedinUserId = TokenService.getCurrentLoggedInUser()
+      
+        const url = `${config.API_ENDPOINT}/exercise/user/${logedinUserId}`;
     
         const options = {
           method: 'GET',

@@ -24,6 +24,7 @@ h1 {
     background-position: center;
     background-size: cover;
     padding: 40px;
+    width: 100%
 }
 
 @media (max-width: 696px) {

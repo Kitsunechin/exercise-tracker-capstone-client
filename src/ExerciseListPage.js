@@ -23,7 +23,7 @@ export default class ExerciseListPage extends React.Component {
     
         for (let value of formData) {
             data[value[0]] = value[1]
-        }
+        };
     
         const requestOptions = {
           method: 'DELETE'
@@ -84,8 +84,8 @@ export default class ExerciseListPage extends React.Component {
           .catch(err => {
             this.setState({
               error: err.message
-            })
-          })
+            });
+          });
         };
   
     render() {

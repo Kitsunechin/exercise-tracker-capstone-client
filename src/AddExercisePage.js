@@ -77,8 +77,8 @@ export default class AddExercisePage extends React.Component {
           .catch(err => {
             this.setState({
               error: err.message
-            })
-          }) 
+            });
+          }); 
       };
 render() {
 return(

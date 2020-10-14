@@ -49,6 +49,6 @@ export default class LandingPage extends React.Component {
         {this.state.isLoginOpen ? <RegistrationPage/>: <LoginPage/>}
        </div>
        </div>
-    ) 
+    ); 
 };
 };

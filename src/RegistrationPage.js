@@ -70,12 +70,12 @@ export default class RegistrationPage extends React.Component {
       let {username, email, password} = data;
       if (this.validateEmail(email) === '') {
         this.setState({
-            error: 'email is not valid'
+            error: 'email is not valid has to include @'
         });
       }
       else if (this.validateUsername(username) === '') {
         this.setState({
-            error: 'username is not valid'
+            error: 'only lowercase and uppercase letters and dash'
         });
       }
       else if (this.validatePassword(password) === '') {
@@ -107,7 +107,7 @@ export default class RegistrationPage extends React.Component {
             }) 
             .catch(res => {
                 this.setState({ error: res.error })
-            }) 
+            }); 
       };
      
     };

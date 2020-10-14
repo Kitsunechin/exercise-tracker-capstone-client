@@ -36,7 +36,7 @@ class Navigation extends Component  {
                     </div> : ''}
                 </nav>
             </div>
-        )
+        );
    };
 };
 

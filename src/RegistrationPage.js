@@ -75,7 +75,7 @@ export default class RegistrationPage extends React.Component {
       }
       else if (this.validateUsername(username) === '') {
         this.setState({
-            error: 'only lowercase and uppercase letters and dash'
+            error: 'only lowercase and uppercase letters'
         });
       }
       else if (this.validatePassword(password) === '') {

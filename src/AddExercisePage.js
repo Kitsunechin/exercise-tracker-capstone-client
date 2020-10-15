@@ -25,7 +25,7 @@ export default class AddExercisePage extends React.Component {
         //for each of the keys in form data populate it with form value
         for (let value of formData) {
           data[value[0]] = value[1]
-        }
+        };
     
         let {
             name,
@@ -80,64 +80,64 @@ export default class AddExercisePage extends React.Component {
             });
           }); 
       };
-render() {
-return(
-    <div className="outer-container">
-    <div className="inner-container">
-          <form className="add-exercise" onSubmit={this.handleSubmit}>
-          <div className="box">
-            <div className="input-group">
-              <label htmlFor="exercise">Type of Exercise</label>
-              <input
-                id="exercise"
-                type="text"
-                name="name"
-                className="login-input"
-                placeholder="running"
-                required/>
-            </div>
-  
-            <div className="input-group">
-              <label htmlFor="length">Length of exercise in minutes</label>
-              <input
-                id="length"
-                type="text"
-                name="exercise_length"
-                className="length-exercise"
-                placeholder="10"
-                required/>
-            </div>
+  render() {
+    return(
+        <div className="outer-container">
+        <div className="inner-container">
+              <form className="add-exercise" onSubmit={this.handleSubmit}>
+              <div className="box">
+                <div className="input-group">
+                  <label htmlFor="exercise">Type of Exercise</label>
+                  <input
+                    id="exercise"
+                    type="text"
+                    name="name"
+                    className="login-input"
+                    placeholder="running"
+                    required/>
+                </div>
+      
+                <div className="input-group">
+                  <label htmlFor="length">Length of exercise in minutes</label>
+                  <input
+                    id="length"
+                    type="text"
+                    name="exercise_length"
+                    className="length-exercise"
+                    placeholder="10"
+                    required/>
+                </div>
 
-            <div className="input-group">
-              <label htmlFor="date">Date</label>
-              <input
-                id="date"
-                type="date"
-                name="date"
-                className="date"
-                required/>
-            </div>
+                <div className="input-group">
+                  <label htmlFor="date">Date</label>
+                  <input
+                    id="date"
+                    type="date"
+                    name="date"
+                    className="date"
+                    required/>
+                </div>
 
-            <div className="input-group">
-              <label htmlFor="notes">Notes</label>
-              <textarea
-                id="notes"
-                type="text"
-                name="notes"
-                className="notes"
-                placeholder="Your notes go here"
-                required/>
+                <div className="input-group">
+                  <label htmlFor="notes">Notes</label>
+                  <textarea
+                    id="notes"
+                    type="text"
+                    name="notes"
+                    className="notes"
+                    placeholder="Your notes go here"
+                    required/>
+                </div>
+      
+                <button
+                  className="add-exercise-btn" type="submit"
+                  >Submit</button>
+              
+              </div>
+              </form>
             </div>
-  
-            <button
-              className="add-exercise-btn" type="submit"
-              >Submit</button>
-          
-          </div>
-          </form>
-        </div>
-        <div className="zen"><img src={zen} width="300" height="300"></img></div>
-        </div>
-);
-};
+            <div className="zen"><img src={zen} width="300" height="300"></img></div>
+            </div>
+    );
+  };
 };

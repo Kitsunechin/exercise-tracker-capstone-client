@@ -89,19 +89,19 @@ export default class ExerciseListPage extends React.Component {
         };
   
     render() {
-    let showExercise = this.state.exercisesList.map((exercise, key) => {         
-            return (
-                <div className="exercise-element" key={key}>
-                <p><span>name of the exercise: </span>{exercise.name}</p>
-                <p><span>length of the exercise: </span>{exercise.exercise_length} min</p>
-                <p><span>date of the exercise: </span>{(exercise.date).slice(0, 10)}</p>
-                <p><span>note: </span>{exercise.notes}</p>
-                <form className="exerciseForm"onSubmit={this.deleteExercise}>
-                    <input type='hidden' name='exerciseId' defaultValue={exercise.id}></input>
-                    <button type='submit' className='exerciseDeleteBtn'>Delete Exercise</button>
-                </form> 
-                </div>)     
-        })
+      let showExercise = this.state.exercisesList.map((exercise, key) => {         
+              return (
+                  <div className="exercise-element" key={key}>
+                  <p><span>name of the exercise: </span>{exercise.name}</p>
+                  <p><span>length of the exercise: </span>{exercise.exercise_length} min</p>
+                  <p><span>date of the exercise: </span>{(exercise.date).slice(0, 10)}</p>
+                  <p><span>note: </span>{exercise.notes}</p>
+                  <form className="exerciseForm"onSubmit={this.deleteExercise}>
+                      <input type='hidden' name='exerciseId' defaultValue={exercise.id}></input>
+                      <button type='submit' className='exerciseDeleteBtn'>Delete Exercise</button>
+                  </form> 
+                  </div>);     
+      });
             return(
                 <div className="outer-container">
                 <div className="inner-container">

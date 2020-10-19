@@ -5,9 +5,7 @@ import './Header.css';
 const Header = () => 
     (
         <header className="App-header">
-            <h1>Fitter</h1>
-            <br />
-            <div className='subtitle'>With Fitter you can keep track of your daily exercises
+            <div className='subtitle'><span className="title">Fitter</span>With Fitter you can keep track of your daily exercises
            <span> Login or Register and start planning your next fit day!</span>
            </div>
         </header>

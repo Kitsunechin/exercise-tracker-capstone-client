@@ -1,3 +1,9 @@
+.title {
+    display: block;
+    color: rebeccapurple;
+    font-size: 2rem;
+    
+}
 
 .subtitle {
     width: 60%;
@@ -5,17 +11,13 @@
     margin-right: auto;
     margin-left: auto;
     background-color: #FEFFFF;
-    opacity: 0.8;
+    opacity: 0.9;
     border-radius: 5px;
     padding: 25px
 }
 
 span {
     font-weight: bolder;
-}
-
-h1 {
-    color: rebeccapurple;
 }
 
 .App-header {
